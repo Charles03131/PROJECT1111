@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% for item in likes %}
+
+{% if user.id == g.user.id %}
+<h1>{{item.recipe_id}}</h1>
+              {% endif %}
+
+
+{% else %}
+<h1>there are no recipes in your likes!</h1>
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% if data %}
+
+   <h1><a href="{{data.sourceUrl}}">{{data.sourceUrl}}</a></h1>
+  
+   
+{% endif %}
+
+
+{% if g.user %}
+
+<li><a href='/users/{{user_id}}/fridge'>FRIDGE</a></li>
+
+
+
+<form action='/users/{{user_id}}/home'>
+   <button>BACK</button>
+   
+</form>
+{% endif %}
+
+
+
+
+{% endblock %}

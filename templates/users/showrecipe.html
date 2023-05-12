@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+{% for info in data %}
+
+  <strong><h1>{{info.title}}</h1></strong>
+  <h3><a href="/recipe/{{info.id}}">Go To Recipe</a></h3>
+  <h2>Number of ingredients missing</h2>
+  <h2>{{info.missedIngredientCount}}</h2>
+  <img src="{{info.image}}">
+   <br>
+   <br>
+  <button class=".unliked" id="likes_button">
+    <span class="glyphicon glyphicon-heart">like</span> 
+  </button>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+ 
+{% endfor %}
+ 
+
+
+{% endblock %}
+
